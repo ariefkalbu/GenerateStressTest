@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objectMap xmlns="urn:schemas-amn-coid:object-map">
+  <alias>
+    <typeAlias alias="Part"  type="mdlPart.Part, mdlPart" />
+    <typeAlias alias="PartSubtitusiDetail"  type="mdlPart.PartSubtitusiDetail, mdlPart" />
+    <typeAlias alias="Attachment"  type="mdlAttachment.Attachment, mdlAttachment" />
+    <typeAlias alias="Zone"  type="mdlZone.Zone, mdlZone" />
+    <typeAlias alias="LoadingGroup"  type="mdlLoadingGroup.LoadingGroup, mdlLoadingGroup" />
+    <typeAlias alias="CombineGroup"  type="mdlCombineGroup.CombineGroup, mdlCombineGroup" />
+    <typeAlias alias="SinglePartGroup"  type="mdlSinglePartGroup.SinglePartGroup, mdlSinglePartGroup" />
+    <typeAlias alias="ApprovalStructure"  type="mdlApprovalStructure.ApprovalStructure, mdlApprovalStructure" />
+    <typeAlias alias="Status"  type="mdlStatus.Status, mdlStatus" />
+    <typeAlias alias="UserInfo"  type="mdlPrivilegeManagement.UserInfo, mdlPrivilegeManagement" />
+  </alias>
+  <objectMaps class="Part"  table="PartProcurement">
+    <property name="Id"  field="Id"  dbtype="nvarchar"  size="100"  primarykey="1" autonumber="generated" />
+    <property name="InfoRecordId"  field="info_record_id"  dbtype="nvarchar"  size="100"/>
+    <property name="PartNo"  field="part_no"  dbtype="nvarchar"  size="20"/>
+    <property name="NetPrice"  field="net_price"  dbtype="float"  size="0"/>
+    <property name="Currency"  field="currency"  dbtype="nvarchar"  size="20"/>
+    <property name="CreatedOn"  field="created_on"  dbtype="date"  size="0"/>
+    <property name="PartCategory"  field="part_category"  dbtype="nvarchar"  size="10"/>
+    <property name="PartName"  field="part_name"  dbtype="nvarchar"  size="500"/>
+    <property name="SupplierCode"  field="supplier_code"  dbtype="nvarchar"  size="100"/>
+    <property name="SupplierName"  field="supplier_name"  dbtype="nvarchar"  size="500"/>
+    <property name="PurchasingGroup"  field="purchasing_group"  dbtype="nvarchar"  size="100"/>
+    <property name="Plant"  field="plant"  dbtype="nvarchar"  size="50"/>
+    <property name="Purchasing"  field="purchasing"  dbtype="nvarchar"  size="50"/>
+    <property name="PartType"  field="part_type"  dbtype="nvarchar"  size="50"/>
+    <property name="Model"  field="model"  dbtype="nvarchar"  size="50"/>
+    <property name="CycleX"  field="cycle_x"  dbtype="int"  size="5"/>
+    <property name="CycleY"  field="cycle_y"  dbtype="int"  size="0"/>
+    <property name="CycleZ"  field="cycle_z"  dbtype="int"  size="0"/>
+    <property name="PlantLevel"  field="plant_level"  dbtype="nvarchar"  size="10"/>
+    <property name="MaterialStatus"  field="material_status"  dbtype="nvarchar"  size="50"/>
+    <property name="PartLength"  field="part_length"  dbtype="float"  size="100"/>
+    <property name="PartWidth"  field="part_width"  dbtype="float"  size="100"/>
+    <property name="PartHeight"  field="part_height"  dbtype="float"  size="100"/>
+    <property name="StatusSubtitusi"  field="status_subtitusi"  dbtype="bit"  size="0"/>
+    <property name="PartSubtitusi"  field="part_subtitusi"  dbtype="nvarchar"  size="50"/>
+    <property name="KanbanQty"  field="kanban_qty"  dbtype="int"  size="0"/>
+    <property name="LastSyncDate"  field="last_sync_date"  dbtype="date"  size="0"/>
+    <property name="Dad"  field="dad"  dbtype="int"  size="0"/>
+    <property name="QtyCheck"  field="qty_check"  dbtype="int"  size="0"/>
+    <property name="Alpha"  field="alpha"  dbtype="float"  size="0"/>
+    <property name="BasicStock"  field="basic_stock"  dbtype="int"  size="0"/>
+    <property name="MaxOrder"  field="max_order"  dbtype="int"  size="0"/>
+    <property name="AmountBasicStock"  field="amount_basic_stock"  dbtype="float"  size="0"/>
+    <property name="SafetyStock"  field="safety_stock"  dbtype="float"  size="100"/>
+    <property name="IsNeedQc"  field="is_need_qc"  dbtype="bit"  size="0"/>
+    <property name="IsDeletionCycle"  field="is_deletion_cycle"  dbtype="bit"  size="0"/>
+    <property name="FileSpis.Id"  field="file_spis"  dbtype="nvarchar"  size="100"  class="Attachment" />
+    <property name="FileSppsd.Id"  field="file_spps_d"  dbtype="nvarchar"  size="50"  class="Attachment" />
+    <property name="FileSppst.Id"  field="file_spps_t"  dbtype="nvarchar"  size="50"  class="Attachment" />
+    <property name="LastCalculationDate"  field="last_calculation_date"  dbtype="date"  size="0"/>
+    <property name="BinLocation"  field="bin_location"  dbtype="nvarchar"  size="100"/>
+    <property name="Zone.Id"  field="zone"  dbtype="nvarchar"  size="100"  class="Zone" />
+    <property name="LoadingGroup.Id"  field="loading_group"  dbtype="nvarchar"  size="100"  class="LoadingGroup" />
+    <property name="CombineGroup.Id"  field="combine_group"  dbtype="nvarchar"  size="100"  class="CombineGroup" />
+    <property name="SinglePartGroup.Id"  field="single_part_group"  dbtype="nvarchar"  size="100"  class="SinglePartGroup" />
+    <property name="PartWeight"  field="part_weight"  dbtype="float"  size="100"/>
+    <property name="PartVolume"  field="part_volume"  dbtype="float"  size="100"/>
+    <property name="BoxP"  field="box_p"  dbtype="float"  size="100"/>
+    <property name="BoxL"  field="box_l"  dbtype="float"  size="100"/>
+    <property name="BoxT"  field="box_t"  dbtype="float"  size="100"/>
+    <property name="BoxWeight"  field="box_weight"  dbtype="float"  size="100"/>
+    <property name="BoxVolume"  field="box_volume"  dbtype="float"  size="100"/>
+    <property name="IsStatusOk"  field="is_status_ok"  dbtype="bit"  size="1"/>
+    <property name="SinglePartQty"  field="single_part_qty"  dbtype="int"  size="0"/>
+    <property name="IsActive"  field="is_active"  dbtype="bit"  size="0"/>
+    <property name="IsKanban"  field="is_kanban"  dbtype="bit"  size="0"/>
+    <property name="IsTmminUnique"  field="is_tmmin_unique"  dbtype="bit"  size="0"/>
+    <property name="IsOrderSsp"  field="is_order_ssp"  dbtype="bit"  size="0"/>
+
+    <property name='CompanyId' field='company_id' dbtype='nvarchar' size='100' hide='true' />
+    <property name="CreatedBy.UserName"  field="created_by"  dbtype="nvarchar"  size="100"  class="UserInfo" />
+    <property name="CreatedDate"  field="created_date"  dbtype="datetime"  size="0"/>
+    <property name="LastUpdatedBy.UserName"  field="last_updated_by"  dbtype="nvarchar"  size="100"  class="UserInfo" />
+    <property name="LastUpdatedDate"  field="last_updated_date"  dbtype="datetime"  size="0"/>
+    <property name="OrderCycle"  field="order_cycle"  dbtype="float"  size="100"/>
+    <property name="LeadTime"  field="lead_time"  dbtype="float"  size="100"/>
+  </objectMaps>
+</objectMap>

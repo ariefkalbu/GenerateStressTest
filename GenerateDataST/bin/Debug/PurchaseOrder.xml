@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+ <objectMap xmlns="urn:schemas-amn-coid:object-map"> 
+ 	<alias> 
+ 		<typeAlias alias="PurchaseOrder"  type="mdlPurchaseOrder.PurchaseOrder, mdlPurchaseOrder" /> 
+ 		<typeAlias alias="Supplier"  type="mdlSupplier.Supplier, mdlSupplier" /> 
+ 		<typeAlias alias="PoType"  type="mdlPoType.PoType, mdlPoType" /> 
+ 		<typeAlias alias="PoBased"  type="mdlPoBased.PoBased, mdlPoBased" /> 
+ 		<typeAlias alias="PurchaseOrderStatus"  type="mdlPurchaseOrderStatus.PurchaseOrderStatus, mdlPurchaseOrderStatus" /> 
+ 		<typeAlias alias="PurchaseOrderDetail"  type="mdlPurchaseOrder.PurchaseOrderDetail, mdlPurchaseOrder" /> 
+ 		<typeAlias alias="PurchaseOrderSyncSet"  type="mdlPurchaseOrder.PurchaseOrderSyncSet, mdlPurchaseOrder" /> 
+ 		<typeAlias alias="Plant"  type="mdlPlant.Plant, mdlPlant" /> 
+ 		<typeAlias alias="Employee"  type="mdlEmployee.Employee, mdlEmployee" /> 
+ 		<typeAlias alias="PoStatusDelivery"  type="mdlPoStatusDelivery.PoStatusDelivery, mdlPoStatusDelivery" /> 
+ 		<typeAlias alias="ApprovalStructure"  type="mdlApprovalStructure.ApprovalStructure, mdlApprovalStructure" />
+		<typeAlias alias="Status"  type="mdlStatus.Status, mdlStatus" />
+		<typeAlias alias="UserInfo"  type="mdlPrivilegeManagement.UserInfo, mdlPrivilegeManagement" />
+	</alias> 
+ 	<objectMaps class="PurchaseOrder"  table="PurchaseOrder"> 
+ 		<property name="Id"  field="Id"  dbtype="nvarchar"  size="100"  primarykey="1" autonumber="generated" svalue="generated" prefix="PO_"/> 
+ 		<property name="PoNo"  field="po_no"  dbtype="nvarchar"  size="50" svalue="generated"/> 
+ 		<property name="PoNoSap"  field="po_no_sap"  dbtype="nvarchar"  size="50" svalue="generated"/> 
+ 		<property name="Supplier.Id"  field="supplier_id"  dbtype="nvarchar"  size="50"  class="Supplier" svalue="100025"/> 
+ 		<property name="PoType.Id"  field="po_type_id"  dbtype="nvarchar"  size="50"  class="PoType" svalue="ADDITIONAL"/> 
+ 		<property name="PoBased.Id"  field="po_based_id"  dbtype="nvarchar"  size="50"  class="PoBased" svalue="MANUAL"/> 
+ 		<property name="PoReference"  field="po_reference"  dbtype="nvarchar"  size="500" svalue="generated"/> 
+ 		<property name="TotalQty"  field="total_qty"  dbtype="int"  size="0" svalue="6"/> 
+ 		<property name="TotalAmount"  field="total_amount"  dbtype="float"  size="0"  svalue="2820540"/> 
+ 		<property name="IsNew"  field="is_new"  dbtype="bit"  size="50" svalue="1"/> 
+ 		<property name="PoStatus.Id"  field="purchase_order_status_id"  dbtype="nvarchar"  size="50"  class="PurchaseOrderStatus" svalue="OPEN"/> 
+ 		<property name="Plant.Id"  field="plant_id"  dbtype="nvarchar"  size="50"  class="Plant" svalue="D300"/> 
+ 		<property name="Pic.Id"  field="pic_id"  dbtype="nvarchar"  size="50"  class="Employee" svalue="5"/> 
+ 		<property name="PoStatusDelivery.Id"  field="po_status_delivery_id"  dbtype="nvarchar"  size="50"  class="PoStatusDelivery" svalue="OPEN"/> 
+ 		<property name="PoDate"  field="po_date"  dbtype="date"  size="0" svalue="generated"/>
+		<property name="GenerateBatch"  field="generate_batch"  dbtype="nvarchar"  size="50" svalue="1"/>
+		<property name='CompanyId' field='company_id' dbtype='nvarchar' size='100' hide='true' svalue="1"/>
+		<property name="Requester.UserName"  field="requester_id"  dbtype="nvarchar"  size="50"  class="UserInfo" svalue="admin"/>
+		<property name="JobPosition.Id"  field="job_position_id"  dbtype="nvarchar"  size="50"  class="ApprovalStructure" svalue="admin"/>
+		<property name="Status.Id"  field="status_id"  dbtype="nvarchar"  size="50"  class="Status" svalue="APPROVED"/>
+		<property name="WorkflowId"  field="workflow_id"  dbtype="nvarchar"  size="50" svalue=""/>
+		<property name="OldId"  field="old_id"  dbtype="nvarchar"  size="50" svalue=""/>
+		<property name="WorkflowInstanceId"  field="workflow_instance_id"  dbtype="nvarchar"  size="50" svalue=""/>
+		<property name="WorkflowTypeId"  field="workflow_type_id"  dbtype="nvarchar"  size="50" svalue=""/>
+		<property name="CreatedBy.UserName"  field="created_by"  dbtype="nvarchar"  size="100"  class="UserInfo" svalue="admin"/>
+		<property name="CreatedDate"  field="created_date"  dbtype="datetime"  size="0" svalue="generated"/>
+		<property name="LastUpdatedBy.UserName"  field="last_updated_by"  dbtype="nvarchar"  size="100"  class="UserInfo" svalue="admin"/>
+		<property name="LastUpdatedDate"  field="last_updated_date"  dbtype="datetime"  size="0" svalue="generated"/>
+  
+  </objectMaps> 
+ </objectMap> 
+ 

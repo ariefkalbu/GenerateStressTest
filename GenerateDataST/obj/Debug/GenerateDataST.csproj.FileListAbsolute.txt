@@ -1,0 +1,10 @@
+G:\KALBU\Learning\C#\GenerateDataST\GenerateDataST\bin\Debug\GenerateDataST.exe.config
+G:\KALBU\Learning\C#\GenerateDataST\GenerateDataST\bin\Debug\GenerateDataST.exe
+G:\KALBU\Learning\C#\GenerateDataST\GenerateDataST\bin\Debug\GenerateDataST.pdb
+G:\KALBU\Learning\C#\GenerateDataST\GenerateDataST\obj\Debug\GenerateDataST.csproj.CoreCompileInputs.cache
+G:\KALBU\Learning\C#\GenerateDataST\GenerateDataST\obj\Debug\GenerateDataST.exe
+G:\KALBU\Learning\C#\GenerateDataST\GenerateDataST\obj\Debug\GenerateDataST.pdb
+G:\KALBU\Learning\C#\GenerateDataST\GenerateDataST\bin\Debug\EPPlus.dll
+G:\KALBU\Learning\C#\GenerateDataST\GenerateDataST\obj\Debug\GenerateDataST.csproj.ResolveComReference.cache
+G:\KALBU\Learning\C#\GenerateDataST\GenerateDataST\obj\Debug\GenerateDataST.csproj.CopyComplete
+G:\KALBU\Learning\C#\GenerateDataST\GenerateDataST\obj\Debug\GenerateDataST.csprojAssemblyReference.cache

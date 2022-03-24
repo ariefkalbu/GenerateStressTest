@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+ <objectMap xmlns="urn:schemas-amn-coid:object-map"> 
+ 	<alias> 
+ 		<typeAlias alias="DeliveryScheduleRevision"  type="mdlDeliveryScheduleRevision.DeliveryScheduleRevision, mdlDeliveryScheduleRevision" /> 
+ 		<typeAlias alias="PurchaseOrderDetail"  type="mdlPurchaseOrder.PurchaseOrderDetail, mdlPurchaseOrder" /> 
+ 		<typeAlias alias="MasterPart"  type="mdlMasterPart.MasterPart, mdlMasterPart" /> 
+ 		<typeAlias alias="Supplier"  type="mdlSupplier.Supplier, mdlSupplier" /> 
+ 		<typeAlias alias="DeliveryScheduleRevisionDetail"  type="mdlDeliveryScheduleRevision.DeliveryScheduleRevisionDetail, mdlDeliveryScheduleRevision" /> 
+ 		<typeAlias alias="Employee"  type="mdlEmployee.Employee, mdlEmployee" /> 
+ 		<typeAlias alias="Part"  type="mdlPart.Part, mdlPart" /> 
+ 		<typeAlias alias="ApprovalStructure"  type="mdlApprovalStructure.ApprovalStructure, mdlApprovalStructure" />
+		<typeAlias alias="Status"  type="mdlStatus.Status, mdlStatus" />
+		<typeAlias alias="UserInfo"  type="mdlPrivilegeManagement.UserInfo, mdlPrivilegeManagement" />
+	</alias> 
+ 	<objectMaps class="DeliveryScheduleRevision"  table="DeliveryScheduleRevision"> 
+ 		<property name="Id"  field="Id"  dbtype="nvarchar"  size="100"  primarykey="1" autonumber="generated" svalue="generated" prefix="DSR_" /> 
+ 		<property name="PurchaseOrderDetail.Id"  field="purchase_order_detail_id"  dbtype="nvarchar"  size="50"  class="PurchaseOrderDetail" svalue="generated"  prefix="POD_"/> 
+ 		<property name="Part.Id"  field="master_part_id"  dbtype="nvarchar"  size="50"  class="MasterPart" svalue="D16400-BZ280-001"/> 
+ 		<property name="Supplier.Id"  field="supplier_id"  dbtype="nvarchar"  size="50"  class="Supplier" svalue="100025"/> 
+ 		<property name="Pic.Id"  field="pic_id"  dbtype="nvarchar"  size="50"  class="Employee" svalue="5"/> 
+ 		<property name="PartProcurement.Id"  field="part_id"  dbtype="nvarchar"  size="50"  class="Part" svalue="19906"/> 
+ 		<property name='CompanyId' field='company_id' dbtype='nvarchar' size='100' hide='true' svalue="1"/>
+		<property name="Requester.UserName"  field="requester_id"  dbtype="nvarchar"  size="50"  class="UserInfo" svalue="admin"/>
+		<property name="JobPosition.Id"  field="job_position_id"  dbtype="nvarchar"  size="50"  class="ApprovalStructure" svalue="1"/>
+		<property name="Status.Id"  field="status_id"  dbtype="nvarchar"  size="50"  class="Status" svalue="DONE"/>
+		<property name="WorkflowId"  field="workflow_id"  dbtype="nvarchar"  size="50" svalue="1"/>
+		<property name="OldId"  field="old_id"  dbtype="nvarchar"  size="50" svalue="1"/>
+		<property name="WorkflowInstanceId"  field="workflow_instance_id"  dbtype="nvarchar"  size="50" svalue="1"/>
+		<property name="WorkflowTypeId"  field="workflow_type_id"  dbtype="nvarchar"  size="50" svalue="1"/>
+		<property name="CreatedBy.UserName"  field="created_by"  dbtype="nvarchar"  size="100"  class="UserInfo" svalue="admin"/>
+		<property name="CreatedDate"  field="created_date"  dbtype="datetime"  size="0" svalue="generated"/>
+		<property name="LastUpdatedBy.UserName"  field="last_updated_by"  dbtype="nvarchar"  size="100"  class="UserInfo" svalue="admin"/>
+		<property name="LastUpdatedDate"  field="last_updated_date"  dbtype="datetime"  size="0" svalue="generated"/>
+		<property name="PoNoSap"   field="po_no_sap"  dbtype="nvarchar"  size="50" svalue="generated" prefix = "PurchaseOrder"/>
+	</objectMaps> 
+ </objectMap> 
+ 
