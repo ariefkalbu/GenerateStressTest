@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+ <objectMap xmlns="urn:schemas-amn-coid:object-map"> 
+ 	<alias> 
+ 		<typeAlias alias="MasterPart"  type="mdlMasterPart.MasterPart, mdlMasterPart" /> 
+ 		<typeAlias alias="Plant"  type="mdlPlant.Plant, mdlPlant" /> 
+ 		<typeAlias alias="ApprovalStructure"  type="mdlApprovalStructure.ApprovalStructure, mdlApprovalStructure" />
+		<typeAlias alias="Status"  type="mdlStatus.Status, mdlStatus" />
+		<typeAlias alias="UserInfo"  type="mdlPrivilegeManagement.UserInfo, mdlPrivilegeManagement" />
+	</alias> 
+ 	<objectMaps class="MasterPart"  table="MasterPart"> 
+ 		<property name="Id"  field="Id"  dbtype="nvarchar"  size="100"  primarykey="1" autonumber="generated" /> 
+ 		<property name="PartNo"  field="part_no"  dbtype="nvarchar"  size="50"/> 
+ 		<property name="PartName"  field="part_name"  dbtype="nvarchar"  size="100"/> 
+    <property name="Unit"  field="unit"  dbtype="nvarchar"  size="100"/> 
+ 		<property name="Plant.Id"  field="plant_id"  dbtype="nvarchar"  size="50"  class="Plant" /> 
+ 		<property name="PlantLevel"  field="plant_level"  dbtype="nvarchar"  size="5"/> 
+ 		<property name="MaterialStatus"  field="material_status"  dbtype="nvarchar"  size="5"/> 
+ 		<property name="PartLength"  field="part_length"  dbtype="int"  size="50"/> 
+ 		<property name="PartWidth"  field="part_width"  dbtype="int"  size="0"/> 
+ 		<property name="PartHeight"  field="part_height"  dbtype="int"  size="0"/> 
+ 		<property name="IsJiepa"  field="is_jiepa"  dbtype="bit"  size="0"/> 
+ 		<property name="IsRil"  field="is_ril"  dbtype="bit"  size="0"/> 
+ 		<property name='CompanyId' field='company_id' dbtype='nvarchar' size='100' hide='true' />
+		<property name="CreatedBy.UserName"  field="created_by"  dbtype="nvarchar"  size="100"  class="UserInfo" />
+		<property name="CreatedDate"  field="created_date"  dbtype="datetime"  size="0"/>
+		<property name="LastUpdatedBy.UserName"  field="last_updated_by"  dbtype="nvarchar"  size="100"  class="UserInfo" />
+		<property name="LastUpdatedDate"  field="last_updated_date"  dbtype="datetime"  size="0"/>
+	</objectMaps> 
+ </objectMap> 
+ 
